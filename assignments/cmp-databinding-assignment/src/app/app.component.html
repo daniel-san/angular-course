@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (current)="updateNumber($event)"></app-game-control>
+      <app-even *ngIf="current_number % 2 == 0">
+        <p style="color: red">Current Number: {{ current_number }}</p>
+      </app-even>
+      <app-odd *ngIf="current_number % 2 != 0">
+        <p style="color: blue">Current Number: {{ current_number }}</p>
+      </app-odd>
+    </div>
+  </div>
+</div>
